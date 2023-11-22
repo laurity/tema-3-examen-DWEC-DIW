@@ -1,3 +1,7 @@
+import { randomRGB } from "./canvas.js";
+import { ctx } from "./canvas.js";
+import { height } from "./canvas.js";
+import { width } from "./canvas.js";
 export class Ball {
     constructor(x, y, velX, velY, size) {
         this.x = x;

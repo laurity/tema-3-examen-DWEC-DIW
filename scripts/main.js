@@ -1,4 +1,6 @@
 import { Ball } from './clase.js'
+import { random } from './canvas.js'
+import { loop } from './canvas.js'
 
 export const balls = [];
 
