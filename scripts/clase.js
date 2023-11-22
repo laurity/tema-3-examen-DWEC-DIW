@@ -39,7 +39,7 @@ export class Ball {
         const dy = this.y - otherBall.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-    // La distancia debe de ser mayor que al tamaño de la bola mas la de la otra bola para poder cambiar el color. SI no, esta cambiando de color todo el rato
+    //La distancia debe de ser mayor que al tamaño de la bola mas la de la otra bola para poder cambiar el color. SI no, esta cambiando de color todo el rato
         if (distance > this.size + otherBall.size) {    
 
             otherBall.color = this.color = randomRGB();
