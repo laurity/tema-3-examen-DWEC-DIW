@@ -13,8 +13,9 @@ export function random(min, max) {
 export function randomRGB() {
     return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
+//Cambio. Cambio de color de la pagina, de verde a negro
 export function loop() {
-    ctx.fillStyle = 'rgba(0, 245, 0, 0.25)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
