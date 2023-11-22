@@ -1,4 +1,4 @@
-class Ball {
+export class Ball {
     constructor(x, y, velX, velY, size) {
         this.x = x;
         this.y = y;
@@ -15,12 +15,18 @@ class Ball {
         ctx.fill();
     }
 
-    update() {
-        if ((this.x + this.size) >= width || (this.x - this.size) <= 0) {
+    update() {  //CAMBIO. 
+        if ((this.x + this.size) >= width) {
             this.velX = -this.velX;
         }
 
-        if ((this.y + this.size) >= height || (this.y - this.size) <= 0) {
+        if ((this.x - this.size) <= 0){
+            this.velX = this.velX;
+        }
+        if ((this.y + this.size) >= height) {
+            this.velY = -this.velY;
+        }
+        if ((this.y - this.size) <= 0){
             this.velY = -this.velY;
         }
 

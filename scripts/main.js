@@ -1,6 +1,8 @@
-const balls = [];
+import { Ball } from './clase.js'
 
-while (balls.length < 25) { //CAMBIO
+export const balls = [];
+
+while (balls.length < 25) { //CAMBIO en el número de bolas
     const size = random(10, 20);
     const ball = new Ball(
         random(0 + size, width - size),
@@ -12,6 +14,5 @@ while (balls.length < 25) { //CAMBIO
 
     balls.push(ball);
 }
-
 
 loop();

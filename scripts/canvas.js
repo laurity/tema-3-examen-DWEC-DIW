@@ -1,17 +1,18 @@
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 const width = canvas.width = window.innerHeight;
 const height = canvas.height = window.innerHeight;
 
-function random(min, max) {
+export function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function randomRGB() {
+export function randomRGB() {
     return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
-function loop() {
+export function loop() {
     ctx.fillStyle = 'rgba(0, 245, 0, 0.25)';
     ctx.fillRect(0, 0, width, height);
 
@@ -24,6 +25,5 @@ function loop() {
             }
         }
     }
-
     requestAnimationFrame(loop);
 }
