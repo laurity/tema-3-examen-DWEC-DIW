@@ -1,10 +1,12 @@
 import { Ball } from './clase.js'
 import { random } from './canvas.js'
 import { loop } from './canvas.js'
+import { width } from './canvas.js';
+import { height } from './canvas.js';
 
 export const balls = [];
 
-while (balls.length < 25) { //CAMBIO en el número de bolas
+while (balls.length < 4) { 
     const size = random(10, 20);
     const ball = new Ball(
         random(0 + size, width - size),

@@ -1,3 +1,4 @@
+import { balls } from "./main.js";
 
 const canvas = document.querySelector('canvas');
 export const ctx = canvas.getContext('2d');
@@ -20,7 +21,7 @@ export function loop() {
         ball.draw();
         ball.update();
         for (const otherBall of balls) {
-            if (ball !== otherBall) {
+            if (ball === otherBall) { //CAMBIO. Tiene que ser igual las direcciones de la bola para cambiar de color
                 ball.collisionDetect(otherBall);
             }
         }
