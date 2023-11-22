@@ -3,7 +3,8 @@ import { balls } from "./main.js";
 const canvas = document.querySelector('canvas');
 export const ctx = canvas.getContext('2d');
 
-export const width = canvas.width = window.innerHeight;
+//Cambio en el Width porque era igual que en los dos
+export const width = canvas.width = window.innerWidth;
 export const height = canvas.height = window.innerHeight;
 
 export function random(min, max) {
@@ -22,7 +23,7 @@ export function loop() {
         ball.draw();
         ball.update();
         for (const otherBall of balls) {
-            if (ball === otherBall) { //CAMBIO. Tiene que ser igual las direcciones de la bola para cambiar de color
+            if (ball !== otherBall) { 
                 ball.collisionDetect(otherBall);
             }
         }
