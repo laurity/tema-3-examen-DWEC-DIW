@@ -6,7 +6,7 @@ import { height } from './canvas.js';
 
 export const balls = [];
 
-while (balls.length < 4) { 
+while (balls.length < 25) { 
     const size = random(10, 20);
     const ball = new Ball(
         random(0 + size, width - size),
